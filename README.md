@@ -14,13 +14,13 @@ You can see that edges with 0 labels are pink and edges with label 1 are black.
 
 # Model   
 The model consists of two parts. 
-In the first part, we derive the embedding of all nodes. 
-In the second part, we concatenate the derived embedding of the source and target nodes of each edge and then I feed it to a linear layer.  Then the output would be the label of that edge.   
+In the first part, I derive the embedding of all nodes. 
+In the second part, I concatenate the derived embedding of the source and target nodes of each edge and then I feed it to a linear layer.  Then the output would be the label of that edge.   
 Note that in some projects, we compute the inner product of the source and target node embedding. This is how we calculate the similarity of two nodes to form an edge between them. Then we use this value and a sigmoid function to predict the label of the edge.   
 # Train the model.  
 For training the model, we should consider an important thing. 
-We only use those edges in the train set for deriving the node embeddings which have a label 1. I specified them as pos_edge_index. 
-Some people split the data to train and test without considering the edge with label 0 in the train set. After training the z, they add edges with the label 0 by using NegativeSampling command. I am not sure it is the best idea since we may consider an edge with 0 labels in both the train and test sets. 
+We only use those edges in the train set for deriving the node embeddings which have a label 1. I specified them as pos_edge_index. (People call them as positive samples)
+Some people split the data to train and test without considering the edge with label 0 in the train set. After training the z, they add edges with the label 0 by using NegativeSampling command (People call these edges as negative samples). I am not sure it is the best idea since we may consider an edge with 0 label in both the train and test sets. 
 After training the model I showed the result using an animation. In the following animation, the wrong predictions are shown with red edges, true label 1 edges are black and true label 0 edges are pale turquoise. 
 
 
