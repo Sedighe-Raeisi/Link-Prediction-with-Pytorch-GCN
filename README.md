@@ -10,7 +10,7 @@ After preparing the dataset I use the command "RandomLinkSplit" to split data to
 I used the networkx draw command to visualize the train and test set of this dataset.   
 In fact, link prediction is an edge classification task here. When using the RandomLinkSplit, the present edges are labeled as 1 and some edges are added which are labeled as zero. These zero edges do not exist in the original dataset. Then the collection of two labeled edges is splitted to test and train.  
 You can see that edges with 0 labels are pink and edges with label 1 are black. 
-![image](![image](https://user-images.githubusercontent.com/67642255/198947742-601e8413-d280-4240-94af-081ea9b67135.png))
+![image](https://user-images.githubusercontent.com/67642255/198947742-601e8413-d280-4240-94af-081ea9b67135.png)
 
 # Model   
 The model consists of two parts. 
