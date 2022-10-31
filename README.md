@@ -10,7 +10,7 @@ After preparing the dataset I use the command "RandomLinkSplit" to split data to
 I used the networkx draw command to visualize the train and test set of this dataset.   
 In fact, link prediction is an edge classification task here. When using the RandomLinkSplit, the present edges are labeled as 1 and some edges are added which are labeled as zero. These zero edges do not exist in the original dataset. Then the collection of two labeled edges is splitted to test and train.  
 You can see that edges with 0 labels are pink and edges with label 1 are black. 
-![image](https://user-images.githubusercontent.com/67642255/197508731-ecd5bdc5-3c7e-4243-ac45-5ab5b9dd8671.png)
+![image](![image](https://user-images.githubusercontent.com/67642255/198947742-601e8413-d280-4240-94af-081ea9b67135.png))
 
 # Model   
 The model consists of two parts. 
@@ -23,4 +23,8 @@ We only use those edges in the train set for deriving the node embeddings which 
 Some people split the data to train and test without considering the edge with label 0 in the train set. After training the z, they add edges with the label 0 by using NegativeSampling command. I am not sure it is the best idea since we may consider an edge with 0 labels in both the train and test sets. 
 After training the model I showed the result using an animation. In the following animation, the wrong predictions are shown with red edges, true label 1 edges are black and true label 0 edges are pale turquoise. 
 
+
+
+
+https://user-images.githubusercontent.com/67642255/198948978-fb3359c2-8ee3-4b1c-b60f-51a46f0d5531.mp4
 
